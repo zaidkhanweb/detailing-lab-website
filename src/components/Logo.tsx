@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/detailing-lab-logo.png.asset.json";
+import logoSrc from "@/assets/detailing-lab-logo.png";
 
 export function Logo({
   compact = false,
@@ -11,7 +11,7 @@ export function Logo({
   return (
     <span className={cn("flex items-center", className)}>
       <img
-        src={logoAsset.url}
+        src={logoSrc}
         alt="Detailing Lab"
         width={1672}
         height={941}
