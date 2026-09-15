@@ -141,8 +141,7 @@ export function Gallery({ editorial = false }: { editorial?: boolean }) {
       )}
 
       <p className="mt-6 text-xs text-muted-foreground">
-        Demo imagery. All gallery images are placeholders to be replaced with
-        photographs supplied or licensed by Detailing Lab.
+        Sample imagery is used in this demo. Final business photography can be added before launch.
       </p>
 
       {current && (
@@ -168,7 +167,7 @@ export function Gallery({ editorial = false }: { editorial?: boolean }) {
                   {current.caption}
                 </p>
                 {current.isPlaceholder && (
-                  <Badge tone="placeholder">Demo image — replace</Badge>
+                  <Badge tone="placeholder">Sample image</Badge>
                 )}
               </div>
               <div className="flex gap-2">

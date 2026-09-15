@@ -32,10 +32,10 @@ export function ReviewCard({ index }: { index: number }) {
       <div className="surface-panel flex h-full flex-col rounded-sm border-dashed p-7">
         <Quote className="size-6 text-accent/70" aria-hidden="true" />
         <p className="mt-5 flex-1 text-body text-muted-foreground">
-          Verified Google review will appear here.
+          Customer review highlights can be added here when approved for the website.
         </p>
         <div className="mt-6 border-t border-border pt-5">
-          <Badge tone="placeholder">Replace with verified Google review</Badge>
+          <Badge tone="placeholder">Review space</Badge>
         </div>
       </div>
     </Reveal>

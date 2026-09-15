@@ -78,7 +78,7 @@ function Home() {
         <SectionHeading
           eyebrow="Gallery"
           title="See the Difference."
-          intro="A look at detailing, coating and protection work. Demo images for this concept."
+          intro="A look at detailing, coating and protection work. Sample imagery is used in this demo."
         />
         <div className="mt-12">
           <Gallery />
@@ -95,7 +95,7 @@ function Home() {
           <SectionHeading
             eyebrow="Reviews"
             title="Trusted by Karachi Car Owners"
-            intro="Our publicly listed Google rating. Individual reviews will be shown here once verified reviews are connected."
+            intro="See Detailing Lab's publicly listed Google rating and visit Google to read current customer reviews."
           />
           <div className="mt-10">
             <RatingBlock />

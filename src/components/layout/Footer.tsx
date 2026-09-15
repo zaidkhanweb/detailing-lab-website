@@ -125,7 +125,7 @@ export function Footer() {
               ) : (
                 <li key={s.label}>
                   <span className="inline-flex h-9 items-center rounded-sm border border-dashed border-border-strong px-3 text-xs text-muted-foreground">
-                    {s.label} — to be added
+                    {s.label}
                   </span>
                 </li>
               ),
@@ -141,8 +141,7 @@ export function Footer() {
             reserved.
           </p>
           <p>
-            Website concept — demo images and placeholder content to be replaced
-            with business-supplied material.
+            Demo website — business details and photography can be updated for the final launch.
           </p>
         </div>
       </div>

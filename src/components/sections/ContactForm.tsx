@@ -217,12 +217,10 @@ export function ContactForm() {
           <AlertCircle className="mt-0.5 size-4 shrink-0 text-destructive" aria-hidden="true" />
           <div className="min-w-0">
             <p className="text-foreground">
-              This form isn't connected to a backend yet, so your request wasn't
-              sent.
+              Online quote requests are not active in this demo.
             </p>
             <p className="mt-1 text-muted-foreground">
-              Please reach us on WhatsApp or call {business.phone} in the
-              meantime.
+              Please use WhatsApp or call {business.phone} to get in touch.
             </p>
           </div>
         </div>
@@ -243,7 +241,7 @@ export function ContactForm() {
       {!business.formEndpoint && (
         <div className="mt-6">
           <Badge tone="placeholder">
-            Form endpoint not configured — editable in site config
+            Online form available on final setup
           </Badge>
         </div>
       )}

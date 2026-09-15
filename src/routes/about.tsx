@@ -12,26 +12,26 @@ const title = "About Detailing Lab — Car Detailing in Gulshan-e-Iqbal, Karachi
 const description =
   "Detailing Lab provides automotive detailing and protection services in Gulshan-e-Iqbal, Karachi, focused on detailing, protection, care and clear guidance.";
 
-/** Editable placeholder sections — owner to supply this information. */
+/** Demo profile sections — final business details can be supplied before launch. */
 const placeholderSections = [
   {
     heading: "Our story",
     prompt:
-      "Add the studio's own background here — how Detailing Lab started and what it focuses on.",
+      "The studio's background and story can be added here for the final website.",
   },
   {
     heading: "The team",
-    prompt: "Add team details here once confirmed by the business.",
+    prompt: "Team names and roles can be added here for the final website.",
   },
   {
     heading: "Products and brands used",
     prompt:
-      "Add the products or brands the studio works with once confirmed by the business.",
+      "Products and brands used by the studio can be featured here when supplied.",
   },
   {
     heading: "Experience and milestones",
     prompt:
-      "Add any experience, milestones or credentials the business wishes to share.",
+      "Experience, milestones or credentials can be added here when supplied.",
   },
 ];
 
@@ -127,9 +127,9 @@ function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <SectionHeading
-          eyebrow="To be completed"
-          title="Sections Ready for Your Details."
-          intro="These sections are intentionally empty. No business history, team or product information has been verified, so placeholders are shown for the owner to complete."
+          eyebrow="Business profile"
+          title="More About the Studio."
+          intro="This demo keeps business-specific background information separate so the final website can use details supplied directly by the studio."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {placeholderSections.map((section, i) => (
@@ -138,7 +138,7 @@ function AboutPage() {
               delay={i * 70}
               className="surface-panel rounded-sm border-dashed p-7"
             >
-              <Badge tone="placeholder">Editable placeholder</Badge>
+              <Badge tone="placeholder">Details to be added</Badge>
               <h3 className="mt-5 text-h3">{section.heading}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {section.prompt}

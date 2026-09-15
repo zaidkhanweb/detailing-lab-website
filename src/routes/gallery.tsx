@@ -81,16 +81,14 @@ function GalleryPage() {
                     {pair.title}
                   </h3>
                   {pair.isPlaceholder && (
-                    <Badge tone="placeholder">Demo pair — replace</Badge>
+                    <Badge tone="placeholder">Sample comparison</Badge>
                   )}
                 </div>
               </Reveal>
             ))}
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
-            Note: all gallery and comparison imagery on this site is demo
-            imagery and should be replaced with images supplied or licensed by
-            Detailing Lab.
+            Sample imagery is used in this demo. Final business photography can be added before launch.
           </p>
         </div>
       </section>

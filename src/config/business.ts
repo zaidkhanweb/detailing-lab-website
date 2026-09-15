@@ -312,7 +312,7 @@ export const galleryImages: GalleryImage[] = [
     src: galleryStudio,
     alt: "Professional car detailing workshop environment",
     category: "Before & After",
-    caption: "Before & after placeholder",
+    caption: "Before & after example",
     isPlaceholder: true,
     span: "tall",
   },
@@ -361,7 +361,7 @@ export const faqItems: FaqItem[] = [
   {
     topic: "Gallery",
     q: "Can I see previous work?",
-    a: "Our gallery section is set up to showcase work from the studio. The images currently shown are demo images for this website concept and will be replaced with photographs from the business.",
+    a: "The gallery is designed to showcase detailing and protection work. Sample imagery is used in this demo, with final business photography added for launch.",
   },
   {
     topic: "Booking / enquiry",

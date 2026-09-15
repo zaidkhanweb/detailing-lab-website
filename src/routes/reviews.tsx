@@ -38,7 +38,7 @@ function ReviewsPage() {
           as="h1"
           eyebrow="Reviews"
           title="Trusted by Karachi Car Owners"
-          intro="Our publicly listed Google rating and review count are shown below. Individual review content is left as placeholders until verified reviews are connected."
+          intro="See Detailing Lab's publicly listed Google rating and review count, with a direct link to current customer reviews on Google."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:max-w-2xl">
@@ -65,7 +65,7 @@ function ReviewsPage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
           <div className="flex flex-wrap items-center gap-4">
             <h2 className="text-h2">What customers say</h2>
-            <Badge tone="placeholder">Awaiting verified reviews</Badge>
+            <Badge tone="placeholder">Customer reviews</Badge>
           </div>
           <div className="mt-12">
             <ReviewsGrid count={6} />

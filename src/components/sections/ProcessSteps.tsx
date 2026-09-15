@@ -9,7 +9,7 @@ export function ProcessSteps() {
         <SectionHeading
           eyebrow="Process"
           title="From Inspection to Finish."
-          intro="A suggested outline of how an enquiry can move forward. Editable — confirm against the studio's actual workflow."
+          intro="A simple look at how a detailing enquiry can move from the first conversation to the finished vehicle."
         />
         <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, i) => (
