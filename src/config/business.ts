@@ -390,26 +390,6 @@ export const faqItems: FaqItem[] = [
   },
 ];
 
-/** Suggested website process — editable. Confirm against the real workflow. */
-export const processSteps = [
-  {
-    title: "Tell Us About Your Car",
-    text: "Share your vehicle details and what you would like looked at.",
-  },
-  {
-    title: "Choose the Right Service",
-    text: "Our team helps you understand which service fits what you need.",
-  },
-  {
-    title: "Our Team Gets to Work",
-    text: "The work is carried out at our studio in Gulshan-e-Iqbal.",
-  },
-  {
-    title: "Inspect the Finished Result",
-    text: "Look over the finished vehicle with our team before you leave.",
-  },
-];
-
 export const pillars = [
   {
     title: "Specialized Services",

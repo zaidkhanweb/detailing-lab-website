@@ -6,7 +6,6 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { LocationSection } from "@/components/sections/LocationSection";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import {
   GoogleReviewsButton,
   RatingBlock,
@@ -72,7 +71,6 @@ function Home() {
       </section>
 
       <WhyChooseUs />
-      <ProcessSteps />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
         <SectionHeading
