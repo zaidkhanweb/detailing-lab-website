@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
@@ -8,22 +9,11 @@ import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { business, services } from "@/config/business";
 import { cn } from "@/lib/utils";
 
-const title = "Car Detailing, Ceramic Coating & PPF Services in Karachi | Detailing Lab";
-const description =
-  "Interior and exterior car detailing, ceramic coating, glass coating, paint protection film and undercoating at Detailing Lab in Gulshan-e-Iqbal, Karachi.";
+const title = "Car Detailing Services in Karachi | Detailing Lab";
+const description = "Explore interior and exterior detailing, ceramic and glass coating, PPF and undercoating services at Detailing Lab in Gulshan-e-Iqbal, Karachi.";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" },
-    ],
-    links: [{ rel: "canonical", href: "/services" }],
-  }),
+  head: () => pageMeta(title, description, "/services"),
   component: ServicesPage,
 });
 

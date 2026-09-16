@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
@@ -9,22 +10,11 @@ import { Reveal } from "@/components/ui-kit/Reveal";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { business } from "@/config/business";
 
-const title = "Contact Detailing Lab — Car Detailing in Gulshan-e-Iqbal, Karachi";
-const description =
-  "Contact Detailing Lab for car detailing, ceramic coating and PPF in Gulshan-e-Iqbal, Karachi. Call +92 330 2689508 or request a quote for your vehicle.";
+const title = "Contact Detailing Lab | Car Detailing Karachi";
+const description = "Contact Detailing Lab in Gulshan-e-Iqbal, Karachi for car detailing, ceramic coating, PPF and vehicle-care enquiries or to request a quote.";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
+  head: () => pageMeta(title, description, "/contact"),
   component: ContactPage,
 });
 

@@ -8,6 +8,7 @@
  * ============================================================================
  */
 
+import { SITE_URL } from "@/config/seo";
 import serviceInterior from "@/assets/service-interior.jpg";
 import serviceExterior from "@/assets/service-exterior.jpg";
 import serviceCeramic from "@/assets/service-ceramic.jpg";
@@ -422,8 +423,9 @@ export const navLinks = [
 /** LocalBusiness structured data — verified information only. */
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "AutoDetailing",
+  "@type": "AutomotiveBusiness",
   name: business.businessName,
+  url: SITE_URL,
   telephone: business.phone,
   address: {
     "@type": "PostalAddress",

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
@@ -12,21 +13,11 @@ import { Reveal } from "@/components/ui-kit/Reveal";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { business } from "@/config/business";
 
-const title = "Reviews — Detailing Lab, Gulshan-e-Iqbal Karachi";
-const description = `Detailing Lab currently holds a publicly listed rating of ${business.rating} from ${business.reviewCount} reviews. See reviews for our car detailing services in Karachi.`;
+const title = "Detailing Lab Reviews | Car Detailing Karachi";
+const description = `See Detailing Lab’s publicly listed Google rating of ${business.rating} from ${business.reviewCount} reviews and visit Google for current customer feedback.`;
 
 export const Route = createFileRoute("/reviews")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/reviews" },
-    ],
-    links: [{ rel: "canonical", href: "/reviews" }],
-  }),
+  head: () => pageMeta(title, description, "/reviews"),
   component: ReviewsPage,
 });
 

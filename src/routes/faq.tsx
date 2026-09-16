@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
@@ -6,21 +7,26 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { faqItems } from "@/config/business";
 
-const title = "FAQ — Car Detailing, Ceramic Coating & PPF | Detailing Lab Karachi";
-const description =
-  "Answers about Detailing Lab's car detailing, ceramic coating, glass coating, PPF and undercoating services in Gulshan-e-Iqbal, Karachi, including quotes and location.";
+const title = "Car Detailing FAQ | Detailing Lab Karachi";
+const description = "Answers about Detailing Lab’s car detailing, ceramic coating, PPF, quotes, preparation, location and opening hours in Karachi.";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/faq" },
+    ...pageMeta(title, description, "/faq"),
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }),
+      },
     ],
-    links: [{ rel: "canonical", href: "/faq" }],
   }),
   component: FaqPage,
 });

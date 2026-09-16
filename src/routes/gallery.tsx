@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
@@ -8,22 +9,11 @@ import { Reveal } from "@/components/ui-kit/Reveal";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { beforeAfterPairs } from "@/config/business";
 
-const title = "Car Detailing Gallery — Karachi | Detailing Lab";
-const description =
-  "Gallery of interior car detailing, exterior detailing, ceramic coating and paint protection film work at Detailing Lab in Gulshan-e-Iqbal, Karachi.";
+const title = "Car Detailing Gallery in Karachi | Detailing Lab";
+const description = "View Detailing Lab’s gallery of car detailing, coating and protection work in Gulshan-e-Iqbal, Karachi.";
 
 export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/gallery" },
-    ],
-    links: [{ rel: "canonical", href: "/gallery" }],
-  }),
+  head: () => pageMeta(title, description, "/gallery"),
   component: GalleryPage,
 });
 

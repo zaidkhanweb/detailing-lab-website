@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
@@ -18,23 +19,12 @@ import { Button } from "@/components/ui-kit/Button";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { faqItems, localBusinessSchema } from "@/config/business";
 
-const title =
-  "Car Detailing & Ceramic Coating in Gulshan-e-Iqbal, Karachi | Detailing Lab";
-const description =
-  "Detailing Lab offers car detailing, ceramic coating, glass coating, PPF and undercoating in Gulshan-e-Iqbal, Karachi. Contact us for your vehicle care needs.";
+const title = "Car Detailing & Ceramic Coating in Karachi | Detailing Lab";
+const description = "Car detailing, ceramic coating, PPF, glass coating and undercoating in Gulshan-e-Iqbal, Karachi. View services or request a quote.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
+    ...pageMeta(title, description, "/"),
     scripts: [
       {
         type: "application/ld+json",

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/config/seo";
 
 import galleryStudio from "@/assets/gallery-studio.jpg";
 import { SiteLayout } from "@/components/layout/SiteLayout";
@@ -8,45 +9,11 @@ import { Reveal } from "@/components/ui-kit/Reveal";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { business, pillars } from "@/config/business";
 
-const title = "About Detailing Lab — Car Detailing in Gulshan-e-Iqbal, Karachi";
-const description =
-  "Detailing Lab provides automotive detailing and protection services in Gulshan-e-Iqbal, Karachi, focused on detailing, protection, care and clear guidance.";
-
-/** Demo profile sections — final business details can be supplied before launch. */
-const placeholderSections = [
-  {
-    heading: "Our story",
-    prompt:
-      "The studio's background and story can be added here for the final website.",
-  },
-  {
-    heading: "The team",
-    prompt: "Team names and roles can be added here for the final website.",
-  },
-  {
-    heading: "Products and brands used",
-    prompt:
-      "Products and brands used by the studio can be featured here when supplied.",
-  },
-  {
-    heading: "Experience and milestones",
-    prompt:
-      "Experience, milestones or credentials can be added here when supplied.",
-  },
-];
+const title = "About Detailing Lab | Car Detailing in Karachi";
+const description = "Learn about Detailing Lab and its automotive detailing and protection services in Gulshan-e-Iqbal, Karachi.";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about" },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
+  head: () => pageMeta(title, description, "/about"),
   component: AboutPage,
 });
 
