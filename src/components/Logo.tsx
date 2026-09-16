@@ -17,7 +17,7 @@ export function Logo({
         height={941}
         className={cn(
           "w-auto object-contain",
-          compact ? "h-8" : "h-10",
+          compact ? "h-10" : "h-14 lg:h-16",
         )}
       />
     </span>

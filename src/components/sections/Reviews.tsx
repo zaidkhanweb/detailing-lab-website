@@ -1,6 +1,5 @@
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
-import { Badge } from "@/components/ui-kit/Badge";
 import { Button } from "@/components/ui-kit/Button";
 import { Reveal } from "@/components/ui-kit/Reveal";
 import { business } from "@/config/business";
@@ -26,29 +25,18 @@ export function RatingBlock() {
   );
 }
 
-export function ReviewCard({ index }: { index: number }) {
+export function ReviewsGrid({ count: _count = 3 }: { count?: number }) {
   return (
-    <Reveal as="article" delay={index * 70} className="h-full">
-      <div className="surface-panel flex h-full flex-col rounded-sm border-dashed p-7">
-        <Quote className="size-6 text-accent/70" aria-hidden="true" />
-        <p className="mt-5 flex-1 text-body text-muted-foreground">
-          Customer review highlights can be added here when approved for the website.
+    <Reveal>
+      <div className="surface-panel rounded-sm p-7 sm:p-8">
+        <p className="text-body text-muted-foreground">
+          Read current customer feedback and ratings directly on Google.
         </p>
-        <div className="mt-6 border-t border-border pt-5">
-          <Badge tone="placeholder">Review space</Badge>
+        <div className="mt-6">
+          <GoogleReviewsButton />
         </div>
       </div>
     </Reveal>
-  );
-}
-
-export function ReviewsGrid({ count = 3 }: { count?: number }) {
-  return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {Array.from({ length: count }).map((_, i) => (
-        <ReviewCard key={i} index={i} />
-      ))}
-    </div>
   );
 }
 

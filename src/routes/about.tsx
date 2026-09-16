@@ -4,7 +4,6 @@ import { pageMeta } from "@/config/seo";
 import galleryStudio from "@/assets/gallery-studio.jpg";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTASection } from "@/components/sections/CTASection";
-import { Badge } from "@/components/ui-kit/Badge";
 import { Reveal } from "@/components/ui-kit/Reveal";
 import { SectionHeading } from "@/components/ui-kit/SectionHeading";
 import { business, pillars } from "@/config/business";
@@ -89,29 +88,6 @@ function AboutPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
-        <SectionHeading
-          eyebrow="Business profile"
-          title="More About the Studio."
-          intro="This demo keeps business-specific background information separate so the final website can use details supplied directly by the studio."
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {placeholderSections.map((section, i) => (
-            <Reveal
-              key={section.heading}
-              delay={i * 70}
-              className="surface-panel rounded-sm border-dashed p-7"
-            >
-              <Badge tone="placeholder">Details to be added</Badge>
-              <h3 className="mt-5 text-h3">{section.heading}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {section.prompt}
-              </p>
-            </Reveal>
-          ))}
         </div>
       </section>
 

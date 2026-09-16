@@ -1,7 +1,6 @@
 import { AlertCircle, CheckCircle2, MessageCircle } from "lucide-react";
 import * as React from "react";
 
-import { Badge } from "@/components/ui-kit/Badge";
 import { Button } from "@/components/ui-kit/Button";
 import { business, services } from "@/config/business";
 import { cn } from "@/lib/utils";
@@ -238,13 +237,6 @@ export function ContactForm() {
         </Button>
       </div>
 
-      {!business.formEndpoint && (
-        <div className="mt-6">
-          <Badge tone="placeholder">
-            Online form available on final setup
-          </Badge>
-        </div>
-      )}
     </form>
   );
 }
