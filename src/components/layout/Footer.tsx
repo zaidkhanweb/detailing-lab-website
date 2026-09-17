@@ -110,7 +110,7 @@ export function Footer() {
             Social
           </h2>
           <ul className="mt-4 flex flex-wrap gap-2 text-sm">
-            {business.socialLinks.filter((s) => s.url).map((s) =>
+            {business.socialLinks.map((s) =>
               s.url ? (
                 <li key={s.label}>
                   <a
@@ -122,7 +122,13 @@ export function Footer() {
                     {s.label}
                   </a>
                 </li>
-              ) : null,
+              ) : (
+                <li key={s.label}>
+                  <span className="inline-flex h-9 items-center rounded-sm border border-dashed border-border-strong px-3 text-xs text-muted-foreground">
+                    {s.label}
+                  </span>
+                </li>
+              ),
             )}
           </ul>
         </div>
@@ -133,6 +139,9 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {business.businessName}. All rights
             reserved.
+          </p>
+          <p>
+            Demo website — business details and photography can be updated for the final launch.
           </p>
         </div>
       </div>
