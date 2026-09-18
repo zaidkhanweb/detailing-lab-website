@@ -17,3 +17,11 @@ A modern responsive website for an automotive detailing and car-care business.
 - TanStack Start
 - Tailwind CSS
 - Vite
+
+## Live Demo
+
+https://detailing-lab-website.vercel.app/
+
+## Project Type
+
+Demo / Portfolio Project
